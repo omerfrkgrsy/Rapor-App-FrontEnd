@@ -1,0 +1,17 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th *ngFor="let key of columns">{{key}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of items">
+      <td *ngFor="let key of columns">{{item[key]}}</td>
+    </tr>
+    <tr>
+      <td *ngFor="let key of columns" ><p  *ngIf="key  != 'İsYeriKodu'">{{totals[key]}}</p>
+        <p  *ngIf="key  == 'İsYeriKodu'">Toplam</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
